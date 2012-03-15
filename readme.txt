@@ -1,5 +1,5 @@
 === BE Gallery  ===
-Version: 1.0.0
+Version: 1.0.1
 Author: Bill Erickson
 Author URI: http://www.billerickson.net
 
@@ -35,6 +35,8 @@ Images are uploaded to posts, which serve as galleries. Posts can be grouped usi
 
 == Changelog ==
 
-= 1.0 =
+= 1.0.1 =
+* Navigate images using swipe left/right on mobile devices
 
+= 1.0.0 =
 * Initial release
