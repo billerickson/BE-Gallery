@@ -46,6 +46,7 @@ add_filter( 'wp_get_attachment_link', 'be_make_prev_next', 10, 6 );
  *
  */
 function be_navigation_script() {
+	wp_enqueue_script( 'jquery-touchwipe', get_stylesheet_directory_uri() . '/lib/jquery.touchwipe.min.js', array( 'jquery' ) );
 	wp_enqueue_script( 'be-navigation', get_stylesheet_directory_uri() . '/lib/navigation.js', array( 'jquery' ) );
 }
 add_action( 'wp_enqueue_scripts', 'be_navigation_script' );
