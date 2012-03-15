@@ -13,6 +13,14 @@ As a Genesis child theme, you must have Genesis theme framework ( http://www.bil
 
 Images are uploaded to posts, which serve as galleries. Posts can be grouped using categories into "sets".
 
+== Installation == 
+
+1. Upload the theme and Genesis
+2. Activate BE Gallery
+3. Go to Settings > Media. Set Thumbnail to 70x70, Medium to 580x440, and Large to 920x600. You can of course use different numbers, but you might need to change aspects of the layout.
+4. Optional: Activate the recommended plugins below.
+5. Go to Posts > Add New. Give your new gallery a title, description (in post content), and upload images. They should not be inserted into the post content. Also select a featured image.
+
 == Recommended Plugins ==
 
 * Matt's Community Tags ( http://wordpress.org/extend/plugins/matts-community-tags/ )
