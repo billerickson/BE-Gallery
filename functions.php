@@ -45,6 +45,7 @@ function child_theme_setup() {
 	genesis_unregister_layout( 'sidebar-content-sidebar' );
 	remove_theme_support( 'genesis-inpost-layouts' );
 	remove_theme_support( 'genesis-archive-layouts' );
+	add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_full_width_content' );
 
 	// Remove Unused Theme Settings
 	add_action( 'genesis_theme_settings_metaboxes', 'be_remove_metaboxes' );
