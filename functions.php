@@ -66,6 +66,9 @@ function child_theme_setup() {
 	
 	// General Functions
 	include_once( CHILD_DIR . '/lib/gallery-functions.php' );
+	
+	// Grab Geo EXIF Data
+	add_filter( 'wp_read_image_metadata', 'be_add_geo_exif', '', 3 );
 
 	// ** Frontend **		
 
@@ -150,6 +153,31 @@ function be_dont_update_theme( $r, $url ) {
 	unset( $themes[ get_option( 'stylesheet' ) ] );
 	$r['body']['themes'] = serialize( $themes );
 	return $r;
+}
+
+/**	
+ * Add image geo EXIF metadata to WordPress
+ *
+ * @since 1.0.1
+ * @link http://www.kristarella.com/2009/04/add-image-exif-metadata-to-wordpress/ 
+ * @return array geo meta data
+ */
+function be_add_geo_exif( $meta, $file, $sourceImageType ) {
+	$exif = @exif_read_data( $file );
+
+	if ( !empty( $exif['GPSLatitude'] ) )
+		$meta['latitude'] = $exif['GPSLatitude'] ;
+
+	if ( !empty( $exif['GPSLatitudeRef'] ) )
+		$meta['latitude_ref'] = trim( $exif['GPSLatitudeRef'] );
+
+	if ( !empty( $exif['GPSLongitude'] ) )
+		$meta['longitude'] = $exif['GPSLongitude'] ;
+
+	if ( !empty( $exif['GPSLongitudeRef'] ) )
+		$meta['longitude_ref'] = trim( $exif['GPSLongitudeRef'] );
+
+	return $meta;
 }
 
 // ** Frontend Functions ** //
