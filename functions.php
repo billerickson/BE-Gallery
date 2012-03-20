@@ -61,9 +61,6 @@ function child_theme_setup() {
 	remove_action( 'show_user_profile', 'genesis_user_layout_fields' );
 	remove_action( 'edit_user_profile', 'genesis_user_layout_fields' );
 
-	// Editor Styles
-	add_editor_style( 'editor-style.css' );
-
 	// Don't update theme
 	add_filter( 'http_request_args', 'be_dont_update_theme', 5, 2 );
 	
