@@ -158,7 +158,7 @@ function be_dont_update_theme( $r, $url ) {
 /**	
  * Add image geo EXIF metadata to WordPress
  *
- * @since 1.0.1
+ * @since 1.0.2
  * @link http://www.kristarella.com/2009/04/add-image-exif-metadata-to-wordpress/ 
  * @return array geo meta data
  */

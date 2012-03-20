@@ -1,5 +1,5 @@
 === BE Gallery  ===
-Version: 1.0.1
+Version: 1.0.2
 Author: Bill Erickson
 Author URI: http://www.billerickson.net
 
@@ -34,6 +34,10 @@ Images are uploaded to posts, which serve as galleries. Posts can be grouped usi
 * "Sets" page template lists all categories
 
 == Changelog ==
+
+= 1.0.2 =
+* Remove editor style (not used), props jaredatch
+* Collect Geo EXIF data, props jaredatch
 
 = 1.0.1 =
 * Navigate images using swipe left/right on mobile devices
