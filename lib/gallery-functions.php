@@ -80,9 +80,7 @@ function be_grab_exif_data_from_wp() {
 	?>
 <ul id="image-meta-data">
 	<?php $meta = wp_get_attachment_metadata( get_the_id() ); $image_meta = $meta['image_meta']; ?>
-	<?php $total = 0; foreach ($image_meta as $value) { $total = $value + $total; } if ($total == 0) { ?>
-
-	<?php } else { ?>
+	<?php if( count( $image_meta ) ) { ?>
 
 	<?php if ( !empty( $image_meta['camera'] ) ) { ?>
 	<li class="camera-used">
